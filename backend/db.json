@@ -12,7 +12,7 @@
     },
     {
       "id": "5b8a",
-      "conteudo": "Na minha máquina funciona!",
+      "conteudo": "Não é bug, é feature!",
       "autoria": "Dev"
     },
     {
@@ -65,5 +65,6 @@
       "conteudo": "Se eu for aí e achar, eu esfrego na sua cara!",
       "autoria": "Mãe"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
