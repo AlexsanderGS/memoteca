@@ -2,10 +2,16 @@ import api from "./api.js";
 const ui = {
   async renderizarPensamentos() {
     const listaPensamentos = document.getElementById("lista-pensamentos");
+    const mensagemVazia = document.getElementById("mensagem-vazia");
     listaPensamentos.innerHTML = "";
     try {
       const pensamentos = await api.buscarPensamentos();
       pensamentos.forEach(ui.adicionarPensamentoNaLista);
+      if (pensamentos.lenght === 0) {
+        mensagemVazia.style.display = "block";
+      } else {
+        mensagemVazia.style.display = "none";
+      }
     } catch (error) {
       alert("Erro ao renderizar pensamentos.");
     }
